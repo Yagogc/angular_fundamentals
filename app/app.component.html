@@ -16,4 +16,12 @@
     <div *ngIf="name.length">
         Searching for... {{name}}
     </div>
+    <h2>Airline Passangers</h2>
+    <ul>
+        <template ngFor let-passenger let-i="index"[ngForOf]="passengers">
+            <li>
+                {{ i + 1}}: {{passenger.fullname}}
+            </li>
+        </template>
+    </ul>
 </div>
