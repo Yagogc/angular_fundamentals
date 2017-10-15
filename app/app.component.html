@@ -1,0 +1,19 @@
+<div class="app">
+    {{title}}
+</div>
+
+<div>
+    <input
+        type="text"
+        [value]="name"
+        (input)="handleChange($event.target.value)">
+
+    <template [ngIf]="name.length > 2">
+        <div>
+            Searching for... {{name}}
+        </div>
+    </template>
+    <div *ngIf="name.length">
+        Searching for... {{name}}
+    </div>
+</div>
